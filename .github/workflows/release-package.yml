@@ -23,5 +23,4 @@ jobs:
           npm run build
       - name: publish-npm
         run: |
-          npm version patch
           npm publish  --scope=@tinymce-plugin --access public
