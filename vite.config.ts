@@ -13,7 +13,7 @@ const banner = `
 *  @plugin ${pkg.name}
 *  @version ${pkg.version} (${nowData.getFullYear()}-${nowData.getMonth()+1}-${nowData.getDate()})
 *  @description ${pkg.description}
-*  @copyright (${nowData.getFullYear()}) ${pkg.author||'Five'} ${ 'https://github.com/tinymce-plugin'+pkg.name.replace(/\@tinymce-plugin/,'')}${ pkg.repository&&pkg.repository.url? '\n*  @repository '+ pkg.repository.url : ''}
+*  @copyright (${nowData.getFullYear()}) ${pkg.author||'Five'} . All rights reserved. ${ 'https://github.com/tinymce-plugin'+pkg.name.replace(/\@tinymce-plugin/,'')}${ pkg.repository&&pkg.repository.url? '\n*  @repository '+ pkg.repository.url : ''}
 `
 export default defineConfig(({command,mode})=>{
  return {

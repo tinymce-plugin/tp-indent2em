@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-   build:
+   build-publish-npm:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,6 +22,6 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
       - name: publish-npm
-         run: |
-          cd dist
+        run: |
+          npm version patch
           npm publish  --scope=@tinymce-plugin --access public

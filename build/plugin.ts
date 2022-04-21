@@ -59,6 +59,8 @@ export const buildPlugin = (pluginConfig?: any)=>{
             fileName=='plugin.js'&&minifyJs(data,filePath.replace(/plugin\.js$/,'plugin.min.js'),true)
             // Save
             fs.writeFileSync(filePath, data)
+            //ceate index.js
+            fs.writeFileSync('./index.js', `require('./${outDir}/plugin.min.js')`)
           } catch (e) {
             // console.log(e)
           }

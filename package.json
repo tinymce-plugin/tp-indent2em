@@ -1,7 +1,11 @@
 {
   "name": "@tinymce-plugin/tp-indent2em",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
+  "main": "./index.js",
+  "module": "./index.js",
+  "browser": "./dist/plugin.min.js",
+  "unpkg": "./dist/plugin.min.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +18,11 @@
   "dependencies": {
     "vue": "^3.2.25"
   },
+  "files": [
+    "dist",
+    "__docs__",
+    "demo"
+  ],
   "homepage": "https://github.com/tinymce-plugin/tp-indent2em",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.1",
