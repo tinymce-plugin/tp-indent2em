@@ -6,17 +6,16 @@ const stateSelectorAdapter = function (editor: { selection: { selectorChangedWit
     } ).unbind;
   };
 };
-
 const create = (editor: any, data?: any)=>{
-  // console.log(editor);
-  // editor.execCommand('tpIndent')
   editor.undoManager.transact(function(){
     editor.focus();
     var _block = editor.selection.getStart();
     while(_block.nodeName !== 'LI'&&_block.nodeName !== 'P'&& _block.nodeName !== 'DIV' &&_block.nodeName !== 'BODY'){
         _block = _block.parentNode
     }
-    editor.dom.getStyle(_block,'text-indent') ? editor.execCommand('tpIndent',false,'remove'):editor.execCommand('tpIndent')
+      if(_block.nodeName !== 'BODY'){
+        editor.dom.getStyle(_block,'text-indent') ? editor.execCommand('tpIndent',false,'remove'):editor.execCommand('tpIndent')
+      }
     
 });
 

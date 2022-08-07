@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script src="/node_modules/tinymce/tinymce.js"></script>
-    <script src="/libs/tp/tinymce-plugin.js"></script>
+    <script src="https://unpkg.com/tinymce-plugin"></script>
     <!-- <script src="https://unpkg.com/@npkg/tinymce-plugins/importword/plugin.js"></script>     -->
   </head>
   <body>
@@ -14,7 +14,7 @@
       <p>这是一个插件测试</p>
     </textarea>
     <!-- <script type="module" src="/src/main.ts"></script> -->
-    <script src="../../dist/plugin.min.js"></script>
+    <script src="/dist/plugin.min.js"></script>
     <script>
       // window['tp-indent2em'].opt
   tinymce.util.XHR.send({
@@ -22,11 +22,15 @@
     async: false,
     dataType: "text",
     success: function (text) {
-    let opt = window[JSON.parse(text).name.replace(/\@tinymce-plugin\//, '')].opt;
+  let registryName = JSON.parse(text).name.replace(/\@tinymce-plugin\//, '').replace(/[-|\_](\w)/g, function(all, letter){
+      return letter.toUpperCase();
+  });
      tinymce.init({
         selector: 'textarea.tinymce',
-        plugins: 'code '+opt.registryName,
-        toolbar: 'code '+opt.registryName
+        skeletonScreen: true,
+        // tp_i18n: true,
+        plugins: 'code '+registryName,
+        toolbar: 'code '+registryName
         });
     }
   })

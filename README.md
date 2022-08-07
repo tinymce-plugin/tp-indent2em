@@ -1,11 +1,4 @@
-# Vue 3 + Typescript + Vite
+# 首行缩进(增强版)
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+![tinymce-plugin Version](https://img.shields.io/badge/tinymce--plugin->=1-blue.svg?logo=github) [![release candidate](https://img.shields.io/npm/v/@tinymce-plugin/tp-indent2em.svg)](https://www.npmjs.com/package/@tinymce-plugin/tp-indent2em) [![GitHub license](https://img.shields.io/github/license/tinymce-plugin/tp-indent2em.svg)](https://github.com/tinymce-plugin/tp-indent2em/blob/main/LICENSE) [![Download](https://img.shields.io/badge/downloads-main-green.svg)](https://codeload.github.com/tinymce-plugin/tp-indent2em/zip/main) [![tinymce Version](https://img.shields.io/badge/tinymce-%3E%3D%205.2.x-green.svg)](https://www.tiny.cloud) 
+> 实现 tinymce 富文本框首行缩进功能 能很好配合 字体大小(fon-size)  字母间距(letter-spacing) 实现首行缩进
